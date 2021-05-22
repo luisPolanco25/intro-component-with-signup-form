@@ -44,3 +44,29 @@ main {
 #page-text p {
     font-weight: 400;
 }
+
+@media (max-width: 1045px) {
+    html {
+        font-size: 18px;
+    }
+    
+    main {
+        width: 700px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -350px;
+    }
+
+    #page-text {
+        flex-basis: 50%;
+    }
+
+    #page-text h1 {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+    }
+
+    #page-text p {
+        font-size: 0.7rem;
+    }
+}

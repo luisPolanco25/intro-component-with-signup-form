@@ -117,3 +117,11 @@ main {
         align-self: center;
     }
 }
+
+
+@media (max-width: 350px) {
+    main {
+        width: 280px;
+        margin-left: -140px;
+    }
+} 

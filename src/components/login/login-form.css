@@ -223,3 +223,24 @@ form .error-image {
     }
 
 }
+
+@media (max-width: 350px) {
+    input {
+        padding-right: 2.8rem;
+    }
+    
+    input, input::placeholder {
+        font-size: 0.7rem;
+    }
+    
+    form .error-text {
+        font-size: 0.56rem;
+        margin-left: 3.1rem;
+    }
+
+    form .error-image {
+        left: 74px;
+        bottom: 54px;
+    }
+
+} 

@@ -163,3 +163,63 @@ form .error-image {
         margin-bottom: -32px;
     }
 }
+
+@media (max-width: 720px) {
+    
+    #try-free {
+        margin-bottom: 1.1rem;
+    }
+
+    form {
+        min-height: 375px;
+        height: auto;
+        margin-bottom: 1.2rem;
+    }
+
+    input {
+        padding-right: 3rem;
+    }
+
+    form #terms {
+        width: 55%;
+        margin-top: 0.6rem;
+    }
+
+    form .error-text {
+        font-size: 0.53rem;
+        margin-left: 9.43rem;
+    }
+
+    form .error-image {
+        bottom: 56px;
+        left: 96px;
+        margin-bottom: -32px;
+    }
+}
+
+@media (max-width: 425px) {
+    #try-free {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #try-free p {
+        width: 85%;
+    }
+
+    form .error-text {
+        font-size: 0.56rem;
+        margin-left: 6rem;
+    }
+
+    form .error-image {
+        bottom: 56px;
+        left: 98px;
+    }
+
+    form #terms {
+        width: 80%;
+        margin-top: 0.7rem;
+    }
+
+}

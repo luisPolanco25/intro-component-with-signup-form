@@ -10,7 +10,7 @@ export const IntroApp = () => {
         email: undefined,
         password: undefined,
     });
-    
+
     return (
         <ErrorContext.Provider value={{isFormValueCorrect, setIsFormValueCorrect}} >
             <Template />

@@ -70,3 +70,50 @@ main {
         font-size: 0.7rem;
     }
 }
+
+@media (max-width: 720px) {
+    body {
+        background: url('../../assets/bg-intro-mobile.png') hsl(0, 100%, 74%);
+    }
+
+    main {
+        flex-direction: column;
+        width: 425px;
+        min-height: 100vh;
+        margin-left: calc(-425px / 2);
+        top: 0;
+        margin-top: 0;
+    }
+
+    #page-text {
+        text-align: center;
+    }
+
+    #page-text h1 {
+        margin-top: 1rem;
+    }
+
+    #page-text p {
+        font-size: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+@media (max-width: 425px) {
+    main {
+        width: 350px;
+        margin-left: -175px;
+    }
+
+    #page-text h1 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    #page-text p {
+        font-size: 0.8rem;
+        width: 85%;
+        align-self: center;
+    }
+}

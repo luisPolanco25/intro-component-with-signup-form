@@ -131,7 +131,7 @@ form .error-image {
 
     form {
         width: 90%;
-        height: 400px;
+        min-height: 420px;
     }
 
     input {

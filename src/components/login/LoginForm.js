@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 export const LoginForm = () => {
 
     const [formValues, handleInputChange] = useForm({
-        firstName: 'Jonathan ',
+        firstName: '',
         lastName: '',
         email: '',
         password: '',
@@ -19,19 +19,38 @@ export const LoginForm = () => {
 
     const {firstName, lastName, email, password} = formValues;
 
+    const handleFocusOut = ({target}) => {
+        if (target.value === '') {
+            setIsFormValueCorrect((previousValue) => ({...previousValue, [target.name]: false}));
+        }
+
+        if (target.name === 'email' && !validator.isEmail(target.value)) {
+            setIsFormValueCorrect((previousValue) => ({...previousValue, [target.name]: false}));
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (firstName.trim() === '') {
-            setIsFormValueCorrect(previousValue => ({...previousValue, firstName: false}));
-        } else if (lastName.trim() === '') {
-            setIsFormValueCorrect(previousValue => ({...previousValue, lastName: false}));
-        } else if (!validator.isEmail(email)) {
-            setIsFormValueCorrect(previousValue => ({...previousValue, email: false}));
-        } else if (password.trim() === '') {
-            setIsFormValueCorrect(previousValue => ({...previousValue, password: false}));
-        } else {
-            Swal.fire('', 'We\'ll get in touch with you shortly', 'success');
+        if (!isFormValueCorrect.firstName) {
+            setIsFormValueCorrect((previousValue) => ({...previousValue, firstName: false}));
+        }
+
+        if (!isFormValueCorrect.lastName) {
+            setIsFormValueCorrect((previousValue) => ({...previousValue, lastName: false}));
+        }
+
+        if (!isFormValueCorrect.email || !validator.isEmail(email)) {
+            setIsFormValueCorrect((previousValue) => ({...previousValue, email: false}));
+        }
+
+        if (!isFormValueCorrect.password) {
+            setIsFormValueCorrect((previousValue) => ({...previousValue, password: false}));
+        }
+
+        if (isFormValueCorrect.firstName && isFormValueCorrect.email
+            && isFormValueCorrect.email && isFormValueCorrect.password) {
+                Swal.fire('', 'We\'ll get in touch with you shortly', 'success');
         }
     }
     
@@ -51,9 +70,9 @@ export const LoginForm = () => {
                     type="text"
                     placeholder="First name"
                     autoComplete="off"
-                    autoFocus
                     value={firstName}
                     onChange={handleInputChange}
+                    onBlur={handleFocusOut}
                 />
                 
                 <p 
@@ -78,6 +97,7 @@ export const LoginForm = () => {
                     autoComplete="off"
                     value={lastName}
                     onChange={handleInputChange}
+                    onBlur={handleFocusOut}
                 />
                 
                 <p 
@@ -102,6 +122,7 @@ export const LoginForm = () => {
                     autoComplete="off"
                     value={email}
                     onChange={handleInputChange}
+                    onBlur={handleFocusOut}
                 />
 
                 <p 
@@ -126,6 +147,7 @@ export const LoginForm = () => {
                     autoComplete="off"
                     value={password}
                     onChange={handleInputChange}
+                    onBlur={handleFocusOut}
                 />
 
                 <p 

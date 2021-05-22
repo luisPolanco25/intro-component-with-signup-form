@@ -39,7 +39,7 @@ export const LoginForm = () => {
         <div id="login-area">
 
             <div id="try-free">
-                <p>Try it free 7 days then $20/mo. thereafter</p>
+                <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
             </div>
 
             <form onSubmit={handleSubmit}>

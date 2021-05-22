@@ -15,6 +15,10 @@
     margin-bottom: 1.5rem;
 }
 
+#try-free span {
+    font-weight: 600;
+}
+
 #try-free p {
     text-align: center;
     color: white;

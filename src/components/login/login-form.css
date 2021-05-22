@@ -1,0 +1,95 @@
+#login-area {
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#try-free {
+    width: 80%;
+    background-color: hsl(248, 32%, 49%);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow:  0 7px 0px hsl(249, 10%, 26%, 30%);
+    margin-bottom: 1.5rem;
+}
+
+#try-free p {
+    text-align: center;
+    color: white;
+}
+
+form {
+    background-color: white;
+    width: 80%;
+    height: 425px;
+    border-radius: 10px;
+    box-shadow:  0 7px 0px hsl(249, 10%, 26%, 30%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.9rem 0 0.9rem 0;
+}
+
+input {
+    /* display: block; */
+    width: 85%;
+    padding: 0.9rem;
+    padding-left: 1.4rem;
+    margin-top: 0.9rem;
+    outline: none;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+input, input::placeholder {
+    font-family:'Poppins', sans-serif;
+    font-size: 0.9rem;
+}
+
+input::placeholder {
+    font-weight: 600;
+}
+
+input:focus {
+    border: 1px solid hsl(249, 10%, 26%) ;
+}
+
+button {
+    width: 85%;
+    padding: 0.9rem;
+    font-size: 0.9rem;
+    font-family:'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    margin-top: 1rem;
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    border-radius: 5px;
+    box-shadow:  0 4px 0px hsl(154, 59%, 43%);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(154, 59%, 51%, 60%);
+}
+
+form p {
+    font-size: 0.65rem;
+    color: hsl(246, 25%, 77%);
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+form p a {
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
